@@ -1,0 +1,283 @@
+nav {
+  display: flex;
+  justify-content: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+nav .nav-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  height: 100px;
+}
+nav .nav-wrapper section {
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  text-decoration: none;
+}
+nav .nav-wrapper section a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+nav .nav-wrapper .logo-cont {
+  display: flex;
+}
+nav .nav-wrapper .logo-cont .car-icon-svg {
+  min-width: 100px;
+  height: auto;
+  color: #ff4d30;
+}
+nav .nav-wrapper .logo-cont .logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav .nav-wrapper .logo-cont .logo-text p {
+  margin: 0;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10rem;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.hero .hero-message {
+  margin-left: 2rem;
+  width: 30%;
+}
+.hero .hero-message h4 {
+  font-size: 1.75rem;
+}
+.hero .hero-message h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+.hero .hero-message .hero-buttons {
+  display: flex;
+  width: 75%;
+  justify-content: space-evenly;
+}
+.hero .hero-message .hero-buttons button {
+  width: 10rem;
+  height: 2.5rem;
+}
+.hero .hero-image {
+  width: 40%;
+}
+.hero .hero-accent {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  z-index: -1;
+  width: 30%;
+}
+
+.form-wrapper {
+  width: 100%;
+  display: flex;
+  margin: 15rem 0;
+  justify-content: center;
+}
+.form-wrapper div {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: #fff;
+  background-image: url(../assets/formbackground.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form-wrapper div form {
+  height: 25rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.form-wrapper div form .span3 {
+  grid-column: span 3;
+  margin: 5rem 5rem 0;
+  height: 3rem;
+}
+.form-wrapper div form .form-item {
+  background: transparent;
+  margin: 0 1rem 2rem;
+  padding-left: 5rem;
+  height: auto;
+  width: 90%;
+  color: #ff4d30;
+  display: flex;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.form-wrapper div form .form-item select {
+  width: 50%;
+  border-radius: 5px;
+  color: grey;
+}
+.form-wrapper div form .form-item input {
+  width: 50%;
+  color: grey;
+}
+.form-wrapper div form .form-item .form-submit {
+  background-color: #ff4d30;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  line-height: 1.2rem;
+}
+
+.bio-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
+}
+.bio-cont .bio-head {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.bio-cont .bio-intro {
+  font-size: 3rem;
+  margin: 1rem 0 3rem;
+}
+.bio-cont div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.bio-cont div .home-bio-card {
+  width: 20%;
+  text-align: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bio-cont div .home-bio-card .bio-image {
+  min-width: 175px;
+  aspect-ratio: 1;
+}
+.bio-cont div .home-bio-card h2 {
+  font-size: 1.75rem;
+}
+.bio-cont div .home-bio-card p {
+  color: grey;
+}
+
+.description-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.description-wrapper .model-head {
+  font-size: 1.8rem;
+  margin: 0;
+}
+.description-wrapper .model-info {
+  font-size: 3rem;
+  margin: 0;
+}
+.description-wrapper .car-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.description-wrapper .car-wrapper img {
+  margin: 0 3rem;
+}
+.description-wrapper .car-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  width: 15%;
+  align-items: center;
+  padding: 0;
+}
+.description-wrapper .car-wrapper ul li {
+  background-color: white;
+  border: 1px solid black;
+  width: 100%;
+  height: 2rem;
+  padding-top: 0.5rem;
+}
+.description-wrapper .car-wrapper ul .list-active {
+  background-color: #ff4d30;
+  color: white;
+}
+.description-wrapper .car-wrapper .car-info-grid {
+  display: grid;
+  width: 15%;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+.description-wrapper .car-wrapper .car-info-grid h1 {
+  border: 1px solid black;
+  margin: 0;
+  padding-top: 0.5rem;
+  color: white;
+}
+.description-wrapper .car-wrapper .car-info-grid p {
+  margin: 0;
+  padding-top: 1rem;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.description-wrapper .car-wrapper .car-info-grid .grid-top {
+  border-top: 1px solid black;
+}
+.description-wrapper .car-wrapper .car-info-grid .grid-border {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+.description-wrapper .car-wrapper .car-info-grid button {
+  margin-top: 1rem;
+}
+.description-wrapper .car-wrapper .car-info-grid button a {
+  text-decoration: none;
+  color: white;
+}
+.description-wrapper .car-wrapper .span2 {
+  grid-column: span 2;
+  background: #ff4d30;
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+footer {
+  width: 100%;
+  border-top: 2px solid grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 3rem 0;
+  padding: 1rem 0;
+}
+footer .footer-item {
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+html {
+  background-color: #f8f8f8;
+  scroll-behavior: smooth;
+}/*# sourceMappingURL=style.css.map */
