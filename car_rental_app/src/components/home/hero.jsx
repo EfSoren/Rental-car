@@ -28,16 +28,18 @@ function HomeHero() {
               <FaCheckCircle />
             </button>
           </a>
-          <button
-            style={{
-              backgroundColor: "black",
-              color: "white",
-              borderRadius: "5px",
-              border: "none",
-            }}
-          >
-            {"Learn More >"}
-          </button>
+          <a href="#models">
+            <button
+              style={{
+                backgroundColor: "black",
+                color: "white",
+                borderRadius: "5px",
+                border: "none",
+              }}
+            >
+              {"Learn More >"}
+            </button>
+          </a>
         </div>
       </section>
       <img src={herocar} className="hero-image" />

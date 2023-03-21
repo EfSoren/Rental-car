@@ -1,0 +1,167 @@
+.secondary-hero {
+  background-image: url("../assets/herosecond.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  .hero-fade {
+    background-color: hsla(0, 0%, 100%, 0.92);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.about-wrapper {
+  width: 100%;
+  margin-top: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .about-title {
+    font-size: 2.5rem;
+  }
+  div {
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    .sale-img {
+      width: 25%;
+    }
+    article {
+      width: 25%;
+      .about-header {
+        font-size: 2.2rem;
+      }
+      .about-desc {
+        font-size: 24px;
+      }
+    }
+  }
+}
+.bio-about {
+  display: flex;
+  margin-top: 5rem;
+
+  justify-content: center;
+  .bio-wrapper {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .about-wrapper {
+    width: 100%;
+    margin-top: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .about-title {
+      font-size: 2rem;
+    }
+    div {
+      gap: 2rem;
+      display: flex;
+      justify-content: center;
+      .sale-img {
+        aspect-ratio: 4/3;
+        width: 35%;
+      }
+      article {
+        width: 35%;
+        .about-header {
+          font-size: 1.5rem;
+        }
+        .about-desc {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .bio-about {
+    .bio-wrapper {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .about-wrapper {
+    width: 100%;
+    margin-top: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .about-title {
+      font-size: 2rem;
+    }
+    div {
+      gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .sale-img {
+        aspect-ratio: 4/3;
+        width: 60%;
+      }
+      article {
+        width: 60%;
+        .about-header {
+          font-size: 1.5rem;
+        }
+        .about-desc {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .bio-about {
+    .bio-wrapper {
+      width: 70%;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .about-wrapper {
+    width: 100%;
+    margin-top: 3rem;
+
+    .about-title {
+      font-size: 2rem;
+    }
+    div {
+      gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .sale-img {
+        aspect-ratio: 4/3;
+        width: 80%;
+      }
+      article {
+        width: 80%;
+        .about-header {
+          font-size: 1.5rem;
+        }
+        .about-desc {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .bio-about {
+    .bio-wrapper {
+      width: 80%;
+    }
+  }
+}

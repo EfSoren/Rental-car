@@ -1,6 +1,15 @@
 @import "./home";
+@import "./about";
+@import "./test";
+@import "./team";
+@import "./contact";
+@import "./rental";
 
 html {
   background-color: #f8f8f8;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
 }

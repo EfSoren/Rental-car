@@ -1,5 +1,5 @@
 import { IoCarSport } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav>
@@ -12,21 +12,21 @@ function Navbar() {
           </div>
         </div>
         <section>
-          <Link to={"/"}>
-            <a>Home</a>
-          </Link>
-          <Link to={"/about"}>
-            <a>About</a>
-          </Link>
-          <Link to={"/testimonials"}>
-            <a>Testimonials</a>
-          </Link>
-          <Link to={"/team"}>
-            <a>Our Team</a>
-          </Link>
-          <Link to={"/contact"}>
-            <a>Contact</a>
-          </Link>
+          <NavLink to={"/"}>
+            <p>Home</p>
+          </NavLink>
+          <NavLink to={"/about"}>
+            <p>About</p>
+          </NavLink>
+          <NavLink to={"/testimonials"}>
+            <p>Testimonials</p>
+          </NavLink>
+          <NavLink to={"/team"}>
+            <p>Our Team</p>
+          </NavLink>
+          <NavLink to={"/contact"}>
+            <p>Contact</p>
+          </NavLink>
         </section>
       </div>
     </nav>

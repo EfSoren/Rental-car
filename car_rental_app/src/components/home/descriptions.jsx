@@ -8,10 +8,9 @@ function CarDescriptions() {
     const lists = document.getElementsByTagName("li");
     for (let i = 0; i < lists.length; i++) {
       lists[i].classList.remove("list-active");
-      console.log("looped");
     }
     elem.target.className = "list-active";
-    console.log(elem.target.value);
+
     switch (elem.target.value) {
       case 1:
         setModelDetails(car1);
@@ -37,7 +36,7 @@ function CarDescriptions() {
   };
 
   return (
-    <section className="description-wrapper">
+    <section className="description-wrapper" id="models">
       <div className="description-header">
         <h3 className="model-head">Vehicle Models</h3>
         <h1 className="model-info">Our rental Fleet</h1>
@@ -67,10 +66,7 @@ function CarDescriptions() {
             Ford Focus
           </li>
         </ul>
-        <img
-          src={modelDetails.Img}
-          style={{ width: "800px", height: "500px" }}
-        />
+        <img src={modelDetails.Img} className="model-image" />
         <aside className="car-info-grid">
           <h1 className="span2 grid-header">${modelDetails.Price}/ Per Day</h1>
           <p className="grid-border grid-top">Make</p>

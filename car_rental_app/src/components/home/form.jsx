@@ -1,14 +1,17 @@
 import { FaCar, FaLocationArrow, FaCalendar } from "react-icons/fa";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 function RentForm() {
+  const orderId = Date.now();
   const [formDetails, setFormDetails] = useState({
     carType: "audi",
     pickupLocation: "Lehi",
     dropLocation: "Lehi",
     pickupDate: "",
     dropDate: "",
+    date: orderId,
   });
-
+  const navigate = useNavigate();
   const updateFormInfo = (e) => {
     e.preventDefault();
     const currentItem = e.target.id;
@@ -17,7 +20,18 @@ function RentForm() {
   };
   const rentCar = (e) => {
     e.preventDefault();
-    setFormDetails({ ...formDetails });
+    const orderId = Date.now();
+    setFormDetails({ ...formDetails, date: orderId });
+    if (
+      !formDetails.carType ||
+      !formDetails.pickupLocation ||
+      !formDetails.dropLocation ||
+      !formDetails.pickupDate ||
+      !formDetails.dropDate
+    ) {
+      alert("Missing Required Fields");
+      return;
+    }
     (function formatDate() {
       const now = Date.now();
       const convertNum = Number(now);
@@ -30,10 +44,14 @@ function RentForm() {
       const dateComparison = `${year}-${month}-${day}`;
       if (dateComparison > formDetails.pickupDate) {
         alert("Cannot rent a car in the past");
+        return;
       } else if (formDetails.pickupDate > formDetails.dropDate) {
         alert("Return date cannot be before pickup date");
+        return;
       }
     })();
+    localStorage.setItem("CarRentalPackage", JSON.stringify(formDetails));
+    navigate("/rental");
   };
   return (
     <section className="form-wrapper" id="form-wrapper">
@@ -49,12 +67,12 @@ function RentForm() {
               *
             </label>
             <select id="carType" onChange={updateFormInfo}>
-              <option value={"audi"}>Audi A5 Coupe</option>
-              <option value={"bmw"}>BMW M2 Coupe</option>
-              <option value={"mazda"}>Mazda3</option>
-              <option value={"chevy"}>Chevy Cruze</option>
-              <option value={"jeep"}>Jeep Wrangler</option>
-              <option value={"ford"}>Ford Focus</option>
+              <option value={"Audi A5 Coupe"}>Audi A5 Coupe</option>
+              <option value={"BMW M2 Coupe"}>BMW M2 Coupe</option>
+              <option value={"Mazda3"}>Mazda3</option>
+              <option value={"Chevy Cruze"}>Chevy Cruze</option>
+              <option value={"Jeep Wrangler"}>Jeep Wrangler</option>
+              <option value={"Ford Focus"}>Ford Focus</option>
             </select>
           </div>
           <div className="form-item">
